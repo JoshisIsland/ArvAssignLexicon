@@ -1,9 +1,12 @@
-﻿namespace ArvAssignLexicon
+﻿using ArvAssignLexicon._3._2;
+
+namespace ArvAssignLexicon
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            //Testing 3.1 Encapsulation
             try
             {
                 //Person person1 = new Person(28, "Josefin", "Olsen", 168, 10);
@@ -21,7 +24,20 @@
             {
                 Console.WriteLine(e.Message);
             }
-            
+
+            //Testing 3.2 Polymorphism
+            List<UserError> errors = new List<UserError>();
+            errors.Add(new NumericInputError());
+            errors.Add(new TextInputError());
+            errors.Add(new TextInputError());
+            errors.Add(new NoInputError());
+            errors.Add(new StupidError());
+            errors.Add(new SleepyError());
+
+            foreach (var item in errors)
+            {
+                Console.WriteLine(item.UEMessage());
+            }
         }
     }
 }
