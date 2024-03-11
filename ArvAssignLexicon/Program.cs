@@ -4,8 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Person person1 = new Person(28, "Josefin", "Olsen", 168, 10);
-            Console.WriteLine(person1.toString());
+            try
+            {
+                Person person1 = new Person(2, "Josefin", "Olsen", 168, 10);
+                Console.WriteLine(person1.toString());
+            } catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
     }
 }
