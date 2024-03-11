@@ -8,7 +8,19 @@ namespace ArvAssignLexicon
 {
     internal class Person
     {
-        private int age { get; set; }
+        private int age
+        {
+            get { return age; }
+            set
+            {
+                if (age > 0)
+                { age = value; }
+                else
+                {
+                    Console.WriteLine("Cant be below 0");
+                }
+            }
+        }
         private string fName { get; set; }
         private string lName { get; set; }
         private int height { get; set; }
@@ -21,6 +33,11 @@ namespace ArvAssignLexicon
             this.lName = lName;
             this.height = height;
             this.weight = weight;
+        }
+
+        public string toString()
+        {
+            return "Name: " + fName + " " + lName + " Age: " + age;
         }
     }
 }
