@@ -11,18 +11,16 @@ namespace ArvAssignLexicon
         private int age;
         private string fName;
         private string lName;
-        private int height { get; set; }
-        private int weight { get; set; }
+        private double height { get; set; }
+        private double weight { get; set; }
 
         public int Age
         {
             get { return age; }
             set
             {
-                if (age > 10)
-                {
-                    age = value;
-                } else
+                age = value;
+                if (age < 0)
                 {
                     throw new ArgumentException("Age cant be less than 0");
                 }
@@ -34,13 +32,11 @@ namespace ArvAssignLexicon
             get { return fName; }
             set
             {
-                if (fName.Length > 2 && fName.Length < 10)
+                fName = value;
+                if (fName.Length < 2 | fName.Length > 10)
                 {
-                    fName = value;
-                } else
-                {
-                    throw new ArgumentException("First name needs to be atleast 2 and no more than 10");
-                }
+                    throw new ArgumentException("First name needs to be atleast 2 letters and no more than 10");
+                }  
             }
         }
 
@@ -49,21 +45,19 @@ namespace ArvAssignLexicon
             get { return lName; }
             set
             {
-                if (lName.Length > 3 && lName.Length < 15)
+                lName = value;
+                if (lName.Length < 3 | lName.Length > 15)
                 {
-                    lName = value;
-                } else
-                {
-                    throw new ArgumentException("Last name needs to be atleast 3 and no more than 15");
+                    throw new ArgumentException("Last name needs to be atleast 3 letters and no more than 15");
                 }
             }
         }
 
-    public Person(int age, string fName, string lName, int height, int weight)
+    public Person(int age, string fName, string lName, double height, double weight)
         {
-            this.age = age;
-            this.fName = fName;
-            this.lName = lName;
+            Age = age;
+            FName = fName;
+            LName = lName;
             this.height = height;
             this.weight = weight;
         }
