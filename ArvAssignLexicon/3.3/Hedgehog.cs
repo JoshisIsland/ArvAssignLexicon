@@ -14,9 +14,13 @@ namespace ArvAssignLexicon._3._3
             this.spikes = spikes;
         }
 
-        public override void DoSound()
+        public override string DoSound()
         {
-            Console.WriteLine("Squek");
+            return "Squek";
+        }
+        public override string Stats()
+        {
+            return "Name: " + name + " Weight: " + weight + " Age: " + age + " Number of spikes: " + spikes;
         }
     }
 }

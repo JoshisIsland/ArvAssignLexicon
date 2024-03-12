@@ -8,9 +8,10 @@ namespace ArvAssignLexicon._3._3
 {
     abstract class Animal
     {
-        string name;
-        double weight;
-        int age;
+        //F: Behöver alla djur ett nytt attribut borde dessa implementeras i animal klassen
+        public string name;
+        public double weight;
+        public int age;
 
         public Animal(string name, double weight, int age)
         {
@@ -19,6 +20,8 @@ namespace ArvAssignLexicon._3._3
             this.age = age;
         }
 
-        public abstract void DoSound();
+        public abstract string DoSound();
+
+        public virtual string Stats() { return "Name: " + name + " Weight: " + weight + " Age: "+ age; }
     }
 }

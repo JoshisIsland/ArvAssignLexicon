@@ -8,6 +8,6 @@ namespace ArvAssignLexicon._3._3
 {
     internal interface IPerson
     {
-        public void Talk();
+        public string Talk();
     }
 }

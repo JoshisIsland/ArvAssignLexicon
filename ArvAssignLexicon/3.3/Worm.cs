@@ -14,9 +14,13 @@ namespace ArvAssignLexicon._3._3
             this.length = length;
         }
 
-        public override void DoSound()
+        public override string DoSound()
         {
-            Console.WriteLine("Wiggle wiggle wiggle");
+            return "Wiggle wiggle wiggle";
+        }
+        public override string Stats()
+        {
+            return "Name: " + name + " Weight: " + weight + " Age: " + age + " Length: " + length;
         }
     }
 }

@@ -14,9 +14,19 @@ namespace ArvAssignLexicon._3._3
             this.goodBoy = goodBoy;
         }
 
-        public override void DoSound()
+        public override string DoSound()
         {
-            Console.WriteLine("Woooof");
+            return "Woooof";
+        }
+
+        public string HowGoodBoy()
+        {
+            return "goodest boy";
+        }
+
+        public override string Stats()
+        {
+            return "Name: " + name + " Weight: " + weight + " Age: " + age + " Goodboy? " + goodBoy;
         }
     }
 }

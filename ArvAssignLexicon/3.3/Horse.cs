@@ -14,9 +14,13 @@ namespace ArvAssignLexicon._3._3
             this.ridable = ridable;
         }
 
-        public override void DoSound()
+        public override string DoSound()
         {
-            Console.WriteLine("Neigh?");
+            return "Neigh?";
+        }
+        public override string Stats()
+        {
+            return "Name: " + name + " Weight: " + weight + " Age: " + age + " Ridable? " + ridable;
         }
     }
 }

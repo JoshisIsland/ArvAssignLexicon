@@ -12,9 +12,9 @@ namespace ArvAssignLexicon._3._3
         {
         }
 
-        public void Talk()
+        public string Talk()
         {
-            Console.WriteLine("what am I..");
+            return "what am I..";
         }
     }
 }

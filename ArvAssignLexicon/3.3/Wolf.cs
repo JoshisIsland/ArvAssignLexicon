@@ -14,9 +14,14 @@ namespace ArvAssignLexicon._3._3
             this.partOfPack = partOfPack;
         }
 
-        public override void DoSound()
+        public override string DoSound()
         {
-            Console.WriteLine("Howl");
+            return "Howl";
+        }
+
+        public override string Stats()
+        {
+            return "Name: " + name + " Weight: " + weight + " Age: " + age + " Part of a pack? " + partOfPack;
         }
     }
 }
